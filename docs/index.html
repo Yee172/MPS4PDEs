@@ -37,6 +37,8 @@
         <!-- Media Queries -->
         <link rel="stylesheet" href="css/media-queries.css">
 
+        <!-- <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script> -->
+
         <!--
         Google Font
         =========================== -->                    
@@ -81,7 +83,8 @@
             <div class="container">
                 <div class="row">
                     <div class="title text-center">
-                        <h2>Generate Proper Point Cloud (STEP 1)</span></h2>
+                        <h2>Generation (STEP 1)</h2>
+                        <h3>Generate Proper Point Cloud</h3>
                     </div>
                     </div>
                     <article class="col-md-6 col-sm-6 col-xs-12">
@@ -110,28 +113,27 @@
             <div class="container">
                 <div class="row">
                     <div class="title text-center">
-                        <h2>Assign Matrix A to Proper Point Cloud (STEP 2)</span></h2>
+                        <h2>Assignment (STEP 2)</h2>
+                        <h3>Assign Matrix A to Proper Point Cloud</h3>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
-                        <div class="wrap-about">                            
-                            <div class="about-content text-center">
-                                <h3 align=center>
-                                    Find Neighbors
-                                </h3>
-
-                            </div>
+                    <article class="col-md-6 col-sm-6 col-xs-12 text-center">
+                        <h3>Find Neighbors via Voxel</h3>
+                        <div class="all-post text-center">
+                            <a class="btn btn-transparent" href="neighbor_voxel.html">
+                                Interactive Example (CLICK ME)
+                                <img class="img-responsive" src="img/neighbor_voxel.png" alt="image">
+                            </a>
                         </div>
-                    </div> 
-                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
-                        <div class="wrap-about">                            
-                            <div class="about-content text-center">
-                                <h3 align=center>
-                                    Select MPS
-                                </h3>
-
-                            </div>
+                    </article>
+                    <article class="col-md-6 col-sm-6 col-xs-12 text-center">
+                        <h3>Select MPS via Minimization Problem</h3>
+                        <div class="all-post text-center">
+                            <a class="btn btn-transparent" href="neighbor_stencil.html">
+                                Interactive Example (CLICK ME)
+                                <img class="img-responsive" src="img/neighbor_stencil.png" alt="image">
+                            </a>
                         </div>
-                    </div> 
+                    </article>
                 </div>         <!-- End row -->
             </div>       <!-- End container -->
         </section>   <!-- End section -->
@@ -141,7 +143,8 @@
             <div class="container">
                 <div class="row">
                     <div class="title text-center">
-                        <h2>Solve Equation Using Assembled Matrix (STEP 3)</span></h2>
+                        <h2>Solving (STEP 3)</h2>
+                        <h3>Solve Equation Using Assembled Matrix</h3>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 text-center">
                         <div class="wrap-about">                            
@@ -265,5 +268,7 @@
         <!-- MathJax -->
         <!-- <script src="/MathJax/MathJax.js"></script> -->
 
+        <!-- Plotly -->
+        <script src="js/plotly/neighbor_voxel.js"></script>
     </body>
 </html>
