@@ -290,43 +290,46 @@ var myPlot = document.getElementById('web_point_cloud');
 
 Plotly.newPlot(myPlot, data, layout);
 
-myPlot.on('plotly_hover', function(data)
+function show_handler(data)
+{
+    for(var i = 0; i < data.points.length; i++)
     {
-        for(var i = 0; i < data.points.length; i++)
+        if (data.points[i].curveNumber > 0)
         {
-            if (data.points[i].curveNumber > 0)
-            {
-                break;
-            }
-            var x = data.points[i].x;
-            var y = data.points[i].y;
-            var index = data.points[i].pointNumber;
-            var d = Math.sqrt(x * x + y * y);
-            if (d < 1)
-            {
-                Plotly.relayout(myPlot, {annotations: [{text:'center point',x:x,y:y}]})
-            }
-            else
-            {
-                Plotly.relayout(myPlot, {annotations: [{text:'boundary point',x:x,y:y}]})
-            }
-            if (index < interior_number)
-            {
-                Plotly.addTraces(myPlot, {hoverinfo:'text',x:ellipses_x[index],y:ellipses_y[index],line:{color:'#0FFF50'}});
-                var stencil = stencils[index];
-                shapes = self.layout.shapes;
-                for (j = 0; j < stencil[0].length; j++)
-                {
-                    shapes.push({type:'line',xref:'x',yref:'y',x0:x,y0:y,x1:stencil[0][j][0],y1:stencil[0][j][1],line:{color:'red',width:1.5}});
-                }
-                for (j = 0; j < stencil[1].length; j++)
-                {
-                    shapes.push({type:'line',xref:'x',yref:'y',x0:stencil[1][j][0],y0:stencil[1][j][1],x1:stencil[1][j][2],y1:stencil[1][j][3],line:{color:'orange',width:1}});
-                }
-                Plotly.relayout(myPlot, {shapes: shapes})
-            }
+            break;
         }
-    });
+        var x = data.points[i].x;
+        var y = data.points[i].y;
+        var index = data.points[i].pointNumber;
+        var d = Math.sqrt(x * x + y * y);
+        if (d < 1)
+        {
+            Plotly.relayout(myPlot, {annotations: [{text:'center point',x:x,y:y}]})
+        }
+        else
+        {
+            Plotly.relayout(myPlot, {annotations: [{text:'boundary point',x:x,y:y}]})
+        }
+        if (index < interior_number)
+        {
+            Plotly.addTraces(myPlot, {hoverinfo:'text',x:ellipses_x[index],y:ellipses_y[index],line:{color:'#0FFF50'}});
+            var stencil = stencils[index];
+            shapes = self.layout.shapes;
+            for (j = 0; j < stencil[0].length; j++)
+            {
+                shapes.push({type:'line',xref:'x',yref:'y',x0:x,y0:y,x1:stencil[0][j][0],y1:stencil[0][j][1],line:{color:'red',width:1.5}});
+            }
+            for (j = 0; j < stencil[1].length; j++)
+            {
+                shapes.push({type:'line',xref:'x',yref:'y',x0:stencil[1][j][0],y0:stencil[1][j][1],x1:stencil[1][j][2],y1:stencil[1][j][3],line:{color:'orange',width:1}});
+            }
+            Plotly.relayout(myPlot, {shapes: shapes})
+        }
+    }
+}
+
+myPlot.on('plotly_hover', show_handler);
+myPlot.on('plotly_click', show_handler);
 myPlot.on('plotly_unhover', function(data)
     {
         try
