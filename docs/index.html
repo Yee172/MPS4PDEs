@@ -35,7 +35,7 @@
         <!-- Media Queries -->
         <link rel="stylesheet" href="css/media-queries.css">
 
-        <!-- <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script> -->
+        <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
 
         <!--
         Google Font
@@ -175,23 +175,17 @@
                     <div class="title text-center">
                         <h2>Numerical Results</span></h2>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                         <div class="wrap-about">                            
                             <div class="about-content text-center">
-                                <h3 align=center>
-                                    Example 1
-                                </h3>
-                                
+                                <div id='web_error_graph_1'></div>
                             </div>
                         </div>
                     </div> 
-                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                         <div class="wrap-about">                            
                             <div class="about-content text-center">
-                                <h3 align=center>
-                                    Example 2
-                                </h3>
-
+                                <div id='web_error_graph_2'></div>
                             </div>
                         </div>
                     </div> 
@@ -246,8 +240,6 @@
         <script src="js/easyPieChart.js"></script>
         <!-- jQuery Easing -->
         <script src="js/jquery.easing-1.3.pack.js"></script>
-        <!-- tweetie.min -->
-        <!-- <script src="js/tweetie.min.js"></script> -->
 
         <!-- Highlight menu item -->
         <script src="js/jquery.nav.js"></script>
@@ -262,8 +254,11 @@
         <!-- Grid js -->
         <script src="js/grid.js"></script>
         <!-- Custom js -->
-        <!-- <script src="js/custom.js"></script> -->
+        <script src="js/custom.js"></script>
         <!-- MathJax -->
         <!-- <script src="/MathJax/MathJax.js"></script> -->
+
+        <script src="js/plotly/error_graph_1.js"></script>
+        <script src="js/plotly/error_graph_2.js"></script>
     </body>
 </html>
