@@ -104,12 +104,11 @@ function initialize()
         xaxis:
         {
             type: 'log',
-            // range: [1e-3, 1],
             autorange: true,
             showgrid: true,
             zeroline: true,
             showline: true,
-            autotick: false,
+            autotick: true,
             ticks: 'outside',
             hoverformat: '.3g',
             showticklabels: true
@@ -117,9 +116,6 @@ function initialize()
         yaxis:
         {
             type: 'log',
-            // scaleanchor: 'x',
-            // scaleratio: 0.2,
-            // range: [1e-5, 10],
             autorange: true,
             showgrid: true,
             zeroline: true,
@@ -127,7 +123,11 @@ function initialize()
             autotick: false,
             ticks: 'outside',
             hoverformat: '.2e',
-            showticklabels: true
+            showticklabels: true,
+            title:
+            {
+                text: 'max norm error'
+            }
         },
         shapes:
         [
@@ -177,7 +177,19 @@ function initialize()
         annotations:
         [
             {
+                xref: 'paper',
+                yref: 'paper',
+                x: 1.00,
+                xanchor: 'left',
+                y: 0.03,
+                yanchor: 'top',
+                text: 'fill distance',
+                showarrow: false
+            },
+            {
                 text: '1st order',
+                ax: 0,
+                ay: 0,
                 x: -3,
                 y: -2
             },
@@ -188,6 +200,8 @@ function initialize()
             },
             {
                 text: '3rd order',
+                ax: 0,
+                ay: 0,
                 x: -2,
                 y: -5
             }
