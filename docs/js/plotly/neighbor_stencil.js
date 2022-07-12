@@ -290,8 +290,29 @@ var myPlot = document.getElementById('web_point_cloud');
 
 Plotly.newPlot(myPlot, data, layout);
 
+function clean_handler(data)
+{
+    while (self.data.length > 1)
+    {
+        Plotly.deleteTraces(myPlot, 1);
+    }
+    if (self.layout.shapes.length > 37)
+    {
+        Plotly.relayout(myPlot, {shapes: self.layout.shapes.slice(0, 37)});
+    }
+    try
+    {
+        if (self.layout.annotations.length > 0)
+        {
+            Plotly.relayout(myPlot, {annotations: []});
+        }
+    }
+    catch (error) {}
+}
+
 function show_handler(data)
 {
+    clean_handler(data);
     for(var i = 0; i < data.points.length; i++)
     {
         if (data.points[i].curveNumber > 0)
@@ -330,22 +351,7 @@ function show_handler(data)
 
 myPlot.on('plotly_hover', show_handler);
 myPlot.on('plotly_click', show_handler);
-myPlot.on('plotly_unhover', function(data)
-    {
-        try
-        {
-            while (true)
-            {
-                Plotly.deleteTraces(myPlot, 1);
-            }
-        }
-        catch (error) {}
-        if (self.layout.shapes.length > 37)
-        {
-            Plotly.relayout(myPlot, {shapes: self.layout.shapes.slice(0, 37)});
-        }
-        Plotly.relayout(myPlot, {annotations: []});
-    });
+myPlot.on('plotly_unhover', clean_handler);
 
 function initialize()
 {
