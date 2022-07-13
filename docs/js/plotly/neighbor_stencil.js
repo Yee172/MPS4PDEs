@@ -357,7 +357,7 @@ function initialize()
 {
     var layout =
     {
-        // title: "TITLE",
+        title: 'green: searching ellipse; red: stencil; orange: mapped boundary points',
         hovermode:'closest',
         xaxis:
         {

@@ -353,7 +353,7 @@ function initialize()
 {
     var layout =
     {
-        // title: "TITLE",
+        title: 'green: searching ellipse; red: covering voxels',
         hovermode:'closest',
         xaxis:
         {
