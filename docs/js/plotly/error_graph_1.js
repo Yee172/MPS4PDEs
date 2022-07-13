@@ -110,7 +110,7 @@ function initialize()
             showline: true,
             autotick: true,
             ticks: 'outside',
-            hoverformat: '.3g',
+            hoverformat: '.2e',
             showticklabels: true
         },
         yaxis:
