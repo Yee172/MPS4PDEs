@@ -365,7 +365,7 @@ $(function() {
 function parallaxInit() {
 	$('#counter').parallax("50%", 0.3);
 	$('#team-skills').parallax("50%", 0.3);
-	$('#twitter-feed').parallax("50%", 0.3);
+	// $('#twitter-feed').parallax("50%", 0.3);
 	$('#testimonial').parallax("50%", 0.3);
 }
 

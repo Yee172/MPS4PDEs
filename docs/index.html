@@ -77,7 +77,7 @@
         </header>
 
         <!-- start section -->
-        <section id="generate" class="parallax-section">
+        <section id="generation" class="parallax-section">
             <div class="container">
                 <div class="row">
                     <div class="title text-center">
@@ -85,20 +85,27 @@
                         <h4><b>Generate Proper Point Cloud</b></h4>
                     </div>
                     </div>
-                    <article class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="all-post text-center">
-                            <a class="btn btn-transparent">
-                                Initialize Point Cloud
-                                <!-- <img class="img-responsive" src="img/result_graph/graph1.png" alt="pic"> -->
-                            </a>
+                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                        <h4><b>1. Initialize Point Cloud</b></h4>
+                        <div class="wrap-about">
+                            <div class="about-content text-left">
+                                <img class="img-responsive" src="img/initial_point_cloud.png" alt="pic">
+                                <b>Domain</b>: the gray area<br>
+                                <b>Extended domain</b>: the whole area<br>
+                                <b>Interior point</b>: points that are inside the domain<br>
+                                <b>Boundary point</b>: points that are outside the domain<br>
+                                <b>Voxel</b>: small blocks that divide the extended domain
+                            </div>
                         </div>
-                    </article>
-                    <article class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="all-post text-center">
-                            <a class="btn btn-transparent">
-                                Adjust Point Cloud
-                                <!-- <img class="img-responsive" src="img/result_graph/graph2.png" alt="pic"> -->
+                    </div>
+                    <article class="col-md-6 col-sm-6 col-xs-12 text-center">
+                        <h4><b>2. Adjust Point Cloud</b></h4>
+                        <div class="all-post text-left">
+                            <a class="btn btn-transparent" href="neighbor_voxel.html">
+                                Interactive Example (CLICK ME)
+                                <img class="img-responsive" src="img/initial_point_cloud.png" alt="image">
                             </a>
+                            
                         </div>
                     </article>
                 <h1></h1>
@@ -115,7 +122,7 @@
                         <h4><b>Assign Matrix A to Proper Point Cloud</b></h4>
                     </div>
                     <article class="col-md-6 col-sm-6 col-xs-12 text-center">
-                        <h4><b>Find Neighbors via Voxel</b></h4>
+                        <h4><b>1. Find Neighbors via Voxel</b></h4>
                         <div class="all-post text-center">
                             <a class="btn btn-transparent" href="neighbor_voxel.html">
                                 Interactive Example (CLICK ME)
@@ -124,7 +131,7 @@
                         </div>
                     </article>
                     <article class="col-md-6 col-sm-6 col-xs-12 text-center">
-                        <h4><b>Select MPS via Minimization Problem</b></h4>
+                        <h4><b>2. Select MPS via Minimization Problem</b></h4>
                         <div class="all-post text-center">
                             <a class="btn btn-transparent" href="neighbor_stencil.html">
                                 Interactive Example (CLICK ME)
@@ -153,7 +160,7 @@
                                 
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 text-center">
                         <div class="wrap-about">                            
                             <div class="about-content text-center">
@@ -174,6 +181,7 @@
                 <div class="row">
                     <div class="title text-center">
                         <h2>Numerical Results</span></h2>
+                        <h4>Large screen devices are recommended<br>Graphs are supposed to fit the screen width<br>Refresh if graphs are not displayed correctly</h4>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                         <div class="wrap-about">                            
