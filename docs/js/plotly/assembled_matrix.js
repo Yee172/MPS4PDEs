@@ -26,7 +26,7 @@ function initialize()
 {
     var layout =
     {
-        title: "Assembled Matrix Example",
+        title: '<b>Assembled Matrix Example</b>',
         hovermode:'closest',
         xaxis:
         {
