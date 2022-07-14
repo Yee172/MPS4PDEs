@@ -108,11 +108,15 @@ function initialize()
             showgrid: true,
             zeroline: true,
             showline: true,
-            autotick: true,
+            autotick: false,
             ticks: 'outside',
             tickformat: '.0e',
             showticklabels: true,
-            hoverformat: '.3e'
+            hoverformat: '.3e',
+            title:
+            {
+                text: 'fill distance'
+            }
         },
         yaxis:
         {
@@ -179,16 +183,6 @@ function initialize()
         annotations:
         [
             {
-                xref: 'paper',
-                yref: 'paper',
-                x: 1.00,
-                xanchor: 'left',
-                y: 0.03,
-                yanchor: 'top',
-                text: 'fill distance',
-                showarrow: false
-            },
-            {
                 text: '1st order',
                 ax: 0,
                 ay: 0,
@@ -208,12 +202,19 @@ function initialize()
                 y: -5
             }
         ],
-        height: 600,
+        height: 650,
         autosize: true,
         showlegend: true,
+        dragmode: 'pan',
+        margin:
+        {
+            r: 20,
+            t: 150
+        },
         legend:
         {
-            'orientation': 'h'
+            'orientation': 'h',
+            y: -0.15
         }
     }
     return layout;

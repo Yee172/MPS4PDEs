@@ -456,9 +456,15 @@ function initialize()
             {type:'line',xref:'x',yref:'y',x0:-1.8,y0:1.6,x1:1.8,y1:1.6,opacity:0.5,line:{color:'gray',width:1}}
         ],
         height: 1000,
-        // width: 800,
         autosize: true,
-        showlegend: false
+        showlegend: false,
+        dragmode: 'pan',
+        margin:
+        {
+            l: 0,
+            r: 0,
+            b: 0
+        }
     }
     return layout;
 }

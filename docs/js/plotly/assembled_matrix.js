@@ -52,7 +52,14 @@ function initialize()
         },
         height: 800,
         autosize: true,
-        showlegend: false
+        showlegend: false,
+        dragmode: 'pan',
+        margin:
+        {
+            l: 0,
+            r: 0,
+            b: 0
+        }
     }
     return layout;
 }
