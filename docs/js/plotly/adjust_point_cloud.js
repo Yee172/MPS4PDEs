@@ -337,7 +337,7 @@ function initialize()
         annotations:
         [
             {
-                text: "<span style='color:lime'>Green: Add</span>          <span style='color:red'>Red: Delete</span>",
+                text: "<span style='color:lime'>&#9673;</span>Green: Add          <span style='color:red'>&#9673;</span>Red: Delete",
                 xref: 'paper',
                 yref: 'paper',
                 x: 0.5,

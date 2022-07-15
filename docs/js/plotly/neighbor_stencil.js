@@ -364,7 +364,7 @@ function initialize()
 {
     var layout =
     {
-        title: "<span style='color:#0FFF50'>Green: Searching Ellipse</span><br><span style='color:red'>Red: Stencil</span><br><span style='color:orange'>Orange: Mapped Boundary Points</span>",
+        title: "<span style='color:#0FFF50'>&#9673;</span>Green: Searching Ellipse<br><span style='color:red'>&#9673;</span>Red: Stencil<br><span style='color:orange'>&#9673;</span>Orange: Mapped Boundary Points",
         hovermode:'closest',
         xaxis:
         {

@@ -360,7 +360,7 @@ function initialize()
 {
     var layout =
     {
-        title: "<span style='color:#0FFF50'>Green: Searching Ellipse</span><br><span style='color:red'>Red: Covering Voxels</span>",
+        title: "<span style='color:#0FFF50'>&#9673;</span>Green: Searching Ellipse<br><span style='color:red'>&#9673;</span>Red: Covering Voxels",
         hovermode:'closest',
         xaxis:
         {
