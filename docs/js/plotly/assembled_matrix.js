@@ -21,7 +21,7 @@ var layout = initialize();
 var config =
 {
     responsive: true,
-    modeBarButtonsToRemove: ['select2d', 'lasso2d', 'resetScale2d']
+    modeBarButtonsToRemove: ['select', 'lasso', 'resetScale']
 };
 
 var myPlot = document.getElementById('web_matrix');
