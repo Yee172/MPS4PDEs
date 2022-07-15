@@ -411,8 +411,6 @@ function initialize()
         dragmode: 'pan',
         margin:
         {
-            l: 20,
-            r: 20,
             t: 120,
             b: 0
         }
