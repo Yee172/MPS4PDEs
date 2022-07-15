@@ -20,7 +20,7 @@ var error_graph_0 =
     hoverinfo: 'x+y',
     x: fill_distance,
     y: error[0]
-}
+};
 
 var error_graph_1 =
 {
@@ -33,7 +33,7 @@ var error_graph_1 =
     hoverinfo: 'x+y',
     x: fill_distance,
     y: error[1]
-}
+};
 
 var error_graph_2 =
 {
@@ -46,7 +46,7 @@ var error_graph_2 =
     hoverinfo: 'x+y',
     x: fill_distance,
     y: error[2]
-}
+};
 
 var error_graph_3 =
 {
@@ -59,7 +59,7 @@ var error_graph_3 =
     hoverinfo: 'x+y',
     x: fill_distance,
     y: error[5]
-}
+};
 
 var error_graph_4 =
 {
@@ -72,7 +72,7 @@ var error_graph_4 =
     hoverinfo: 'x+y',
     x: fill_distance,
     y: error[3]
-}
+};
 
 var error_graph_5 =
 {
@@ -85,15 +85,21 @@ var error_graph_5 =
     hoverinfo: 'x+y',
     x: fill_distance,
     y: error[4]
-}
+};
 
 var data = [error_graph_0, error_graph_1, error_graph_2, error_graph_3, error_graph_4, error_graph_5];
 
 var layout = initialize();
 
+var config =
+{
+    responsive: true,
+    modeBarButtonsToRemove: ['select2d', 'lasso2d', 'resetScale2d']
+};
+
 var myPlot = document.getElementById('web_error_graph_23');
 
-Plotly.newPlot(myPlot, data, layout);
+Plotly.newPlot(myPlot, data, layout, config);
 
 function initialize()
 {

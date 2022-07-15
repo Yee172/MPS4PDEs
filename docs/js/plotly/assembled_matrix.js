@@ -12,15 +12,21 @@ var matrix =
     text: s,
     x: x,
     y: y
-}
+};
 
 var data = [matrix];
 
 var layout = initialize();
 
+var config =
+{
+    responsive: true,
+    modeBarButtonsToRemove: ['select2d', 'lasso2d', 'resetScale2d']
+};
+
 var myPlot = document.getElementById('web_matrix');
 
-Plotly.newPlot(myPlot, data, layout);
+Plotly.newPlot(myPlot, data, layout, config);
 
 function initialize()
 {
