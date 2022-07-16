@@ -257,7 +257,16 @@ var config =
 {
     scrollZoom: true,
     responsive: true,
-    modeBarButtonsToRemove: ['select2d', 'lasso2d', 'resetScale2d']
+    displayModeBar: true,
+    modeBarButtonsToRemove: ['select2d', 'lasso2d', 'resetScale2d'],
+    modeBarButtonsToAdd:
+    [
+        {
+            name: 'Back',
+            icon: Plotly.Icons.home,
+            click: function(gd) {window.location.href = 'index.html'}
+        }
+    ]
 };
 
 var myPlot = document.getElementById('web_point_cloud');
